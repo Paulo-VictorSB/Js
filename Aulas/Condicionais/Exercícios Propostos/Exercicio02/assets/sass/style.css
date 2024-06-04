@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#form {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: rgb(49,49,49);
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 60%;
+    width: 60%;
+}
+
+select {
+    height: 25px;
+    width: 50%;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+option {
+    color: black;
+}
+
+#calc {
+    width: 50%;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#imagemEstado {
+    margin-top: 10px;
+    width: 300px;
+    height: 210px;
+}

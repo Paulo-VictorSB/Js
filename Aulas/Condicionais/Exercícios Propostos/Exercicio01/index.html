@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limite de Velocidade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            display: flex;
+            text-align: center;
+            gap: 5px;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(49, 49, 49);
+            border: 1px solid white;
+            border-radius: 5px;
+            height: 50%;
+            width: 50%;
+            padding: 10px;
+        }
+
+        button {
+            width: 30%;
+        }
+
+        #km {
+            padding: 10px;
+        }
+
+        p {
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        @keyframes sumir {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 100;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <p>Digite o KM que você estava dirigindo..</p>
+        <input type="text" name="" id="km">
+        <button onclick="calcular()">Calcular</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcular(){
+            var km = Number(document.getElementById('km').value)
+            if (km == ''){
+                document.querySelector('#resultado').innerHTML = 'Digite seu KM correto..'
+                document.querySelector('#resultado').style.animation = 'sumir 1s infinite'
+            }else if (km < 50) {
+                document.querySelector('#resultado').innerHTML = `Sua velocidade é de ${km}Km/h e você está tirando onda!`
+                document.querySelector('div').style.backgroundColor = 'green'
+                document.querySelector('#resultado').style.animation = 'sumir 1s infinite'
+            } else if (km == 50) {
+                document.querySelector('#resultado').innerHTML = `Sua velocidade é de ${km}Km/h e você está no limite da via, cuidado..!`
+                document.querySelector('div').style.backgroundColor = 'orange'
+                document.querySelector('#resultado').style.animation = 'sumir 1s infinite'
+            } else {
+                document.querySelector('#resultado').innerHTML = `Sua velocidade é de ${km}Km/h e você foi multado por excesso de velocidade!`
+                document.querySelector('div').style.backgroundColor = 'Red'
+                document.querySelector('#resultado').style.animation = 'sumir 1s infinite'
+            }
+        }
+    </script>
+</body>
+</html>
