@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(61, 210, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 5px;
+}
+
+header {
+    color: white;
+}
+
+#content {
+    background-color: white;
+    height: 50%;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+#desafio {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#resultado {
+    height: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    padding: 10px;
+}
+
+#resultado > p {
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    font-weight: bold;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
