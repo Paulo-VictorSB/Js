@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicação Dinâmica</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    
+    <section id="container">
+        <h1 id="h1">Multiplicação dinâmica</h1>
+        <p id="numeroAMultiplicarText">Digite o número que você quer multiplicar: <input type="text" name="" id="numeroAMultiplicar"></p>
+        <p id="multiplicadorText">Selecione até quantas vezes você quer multiplicar: 
+            <select name="" id="multiplicador">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+        </select>
+        </p>
+        <button onclick="calcular()" id="calcular">Calcular Resultado</button>
+        <div id="resultado-container">
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

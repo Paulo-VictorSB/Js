@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de números</title>
+</head>
+<body>
+    
+    <div id="container">
+        <p>Eu quero contar até um número, você pode me ajudar a contar até ele? <input type="number" name="" id="numeroCliente"></p>
+        <button onclick="calcular()">Calcular</button>
+    </div>
+
+    <script>
+        function calcular(){
+            let container = document.querySelector('#container')
+            let numeroCliente = Number(document.querySelector('#numeroCliente').value)
+
+            let i = 1
+            do {
+                let p = document.createElement('p')
+                p.textContent = i
+                container.appendChild(p)
+                i++
+            } while (i <= numeroCliente)
+        }
+
+    </script>
+
+</body>
+</html>
