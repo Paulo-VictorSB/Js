@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript DOM - Exercício 001</title>
+    <title>JavaScript DOM - Exercício 009</title>
     <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/png">
     <!-- bootstrap -->
     <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+    <style>
+        h3 {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    
     <div class="container mt-5">
         <div class="row">
             <div class="col text-center">
@@ -19,7 +23,8 @@
         </div>
         <div class="row mt-5">
             <div class="col text-center">
-                <input type="range" id="range" class="form-range">
+                <input type="range" id="range" class="form-range" oninput="mover()" min="0" max="100" value="100">
+                <div id="text"></div>
             </div>
         </div>
     </div>

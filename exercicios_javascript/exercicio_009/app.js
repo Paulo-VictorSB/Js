@@ -8,3 +8,21 @@ Enunciado:
 
     NOTA: Deves definir os valores do range.
 ---------------------------------------------------------------------------- */
+
+// function mover(){
+//     let range = Number(document.querySelector('#range').value)
+//     let h3 = document.querySelector('h3')
+//     let text = document.querySelector('#text')
+
+//     text.innerHTML = range
+//     h3.style.opacity = range + '%'
+// }
+
+function mover() {
+    let range = Number(document.querySelector('#range').value);
+    let h3 = document.querySelector('h3');
+    let text = document.querySelector('#text');
+
+    text.innerHTML = range;
+    h3.style.opacity = (100 - range) / 100;
+}
