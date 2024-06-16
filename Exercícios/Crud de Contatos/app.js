@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
-        // Função de edição dos contatos
+            // Função de edição dos contatos
         editBtn.addEventListener('click', () => {
 
             editBtn.classList.add('hide')
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cancelEditBtn.classList.remove('hide')
 
             const personalContacts = personalContainer.querySelectorAll('.personal-contacts')
-        
+                // Pegando todos os .personal-contacts e adicionando os botoes de edição
             personalContacts.forEach(element => {
                 const penBtn = document.createElement('button')
                 penBtn.classList.add('fa-solid', 'fa-pen')
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.appendChild(eraseBtn)
             });
         
-
+                // função de cancelar a edição
             cancelEditBtn.addEventListener('click', () => {
                     personalContacts.forEach(element => {
                     const penBtn = element.querySelector('.fa-pen')
@@ -162,17 +162,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 eraseBtn.addEventListener('click', () => {
 
                     element.remove()
-        
+                        // Se não tiver nenhum .personal-contacts
                     if (personalContainer.querySelector('.personal-contacts') === null) {
                         newContact.classList.remove('hide')
                         cancelEditBtn.classList.add('hide')
-                    }
+                    }   // Se tiver ao menos um .personal-contacts
                     if (personalContainer.querySelector('.personal-contacts') !== null) {
                         editBtn.classList.remove('hide')
                     }
                 });
             });
-
+                // Quando clicar no lapis de editar, cria os elementos para edição do user
             personalContacts.forEach(element => {
                 const penBtn = element.querySelector('.fa-pen')
                 penBtn.addEventListener('click', ()=>{
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     divContactBefore.appendChild(actions)
                     actions.appendChild(confirmBtn)
                     actions.appendChild(cancelBtn) 
-
+                        // função do botão de confirmação com validação, remoção e adição de classe + remoção de elementos
                     confirmBtn.addEventListener('click', ()=>{
                         if(inputName.value == '' || inputNumber.value == 0 || inputNumber.value.length < 11 || inputName.value.length < 5){
                             alert('Por favor, insira dados válidos: o nome deve ter pelo menos 5 letras e o número de contato deve incluir DDD seguido de 9 dígitos')
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             valueNumber.innerHTML = inputNumber.value
                         }
                     })
-
+                        // função do botão de cancelamento
                     cancelBtn.addEventListener('click', () => {
                         personalContacts.forEach(element => {
                             const penBtn = element.querySelector('.fa-pen')
