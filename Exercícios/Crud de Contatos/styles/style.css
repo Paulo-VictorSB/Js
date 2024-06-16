@@ -9,31 +9,47 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+    color: #333;
+}
+
+body {
+    background-color: #00012b;
+    padding-top: 200px;
 }
 
 .main-content {
-    background-color: #333;
+    background-color: #00012b;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
+.name-contact {
+    margin-bottom: 5px;
+}
+
+.number-contact {
+    margin-bottom: 10px;
+}
 .content {
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
-    width: 30%;
+    width: 40%;
     padding: 20px;
+    gap: 20px;
 }
 
-#newContat-Before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
+.newContact-Before {
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 
 .img {
@@ -45,9 +61,11 @@
 
 .personal-contacts{
     display: flex;
+    flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
+    width: 350px;
 }
 
 .personal-contacts > button {
@@ -55,5 +73,53 @@
 }
 
 .hide {
-    display: hide;
+    display: none;
+}
+
+#personal-contacts-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    border-top: 1px solid #333;   
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.searchBtn {
+    width: 30px;
+}
+
+nav {
+    display: flex;
+    width: 58%;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+button, select, input {
+    padding: 5px;
+}
+
+#imgPreview {
+    background-color: #333;
+}
+
+#actions {
+    display: flex;
+    gap: 47px;
+}
+
+.block {
+    display: block;
+}
+
+#newContact-Before {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
