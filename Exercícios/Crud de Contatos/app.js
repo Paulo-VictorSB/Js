@@ -58,12 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const inputName = document.createElement('input')
         inputName.type = 'text'
         inputName.classList.add('name-contact')
-        inputName.placeholder = 'Name *'
+        inputName.placeholder = 'Nome *'
 
         const inputNumber = document.createElement('input')
         inputNumber.type = 'number'
         inputNumber.classList.add('number-contact')
-        inputNumber.placeholder = 'Number *'
+        inputNumber.placeholder = 'Número *'
 
         const actions = document.createElement('div')
         actions.id = 'actions'
@@ -187,13 +187,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     const inputName = document.createElement('input')
                     inputName.type = 'text'
                     inputName.classList.add('name-contact')
-                    inputName.placeholder = 'Name *'
+                    inputName.placeholder = 'Nome *'
                     inputName.value = valueName.innerHTML
             
                     const inputNumber = document.createElement('input')
                     inputNumber.type = 'number'
                     inputNumber.classList.add('number-contact')
-                    inputNumber.placeholder = 'Number *'
+                    inputNumber.placeholder = 'Número *'
                     inputNumber.value = valueNumber.innerHTML
             
                     const actions = document.createElement('div')
