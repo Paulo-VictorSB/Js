@@ -7,11 +7,13 @@ Inverta a ordem dos elementos no array.
 */
 
 let array = [1,2,3,4,5,6,7,8,9,10]
+console.log(array)
 
 let arrayImpares = array.filter(num => num % 2 !== 0)
+console.log(arrayImpares)
 
 array.push(11,12,13,14,15)
+console.log(array)
 
 array.reverse()
-
 console.log(array)
