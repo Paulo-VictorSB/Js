@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Seletores gerais
 
         // Menu de busca
-    const searchBar = document.querySelector('#searchInput')
     const searchBtn = document.querySelector('.searchBtn')
         // Menu de filtros
     const filterSelect = document.querySelector('#filterSelect')
@@ -50,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     newContact.addEventListener('click', ()=>{
         newContact.classList.add('hide')
+        editBtn.classList.add('hide')
 
             // Cria os elementos para adição do contato
         const dataProfile = document.createElement('div')
@@ -58,12 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const inputName = document.createElement('input')
         inputName.type = 'text'
         inputName.classList.add('name-contact')
-        inputName.placeholder = 'Name *'
+        inputName.placeholder = 'Nome *'
 
         const inputNumber = document.createElement('input')
         inputNumber.type = 'number'
         inputNumber.classList.add('number-contact')
-        inputNumber.placeholder = 'Number *'
+        inputNumber.placeholder = 'Número *'
 
         const actions = document.createElement('div')
         actions.id = 'actions'
@@ -87,10 +87,16 @@ document.addEventListener('DOMContentLoaded', () => {
             dataProfile.remove()
             actions.remove()
             newContact.classList.remove('hide')
+            const personalContacts = document.querySelector('#personal-contacts-container')
+            const checkClass = personalContacts.querySelector('.personal-contacts')
+            if(checkClass != null){
+                editBtn.classList.remove('hide')
+            }
         })
 
             // Confirma a adição com Validação dos inputs
         confirmBtn.addEventListener('click', ()=>{
+            
             if(inputName.value == '' || inputNumber.value == 0 || inputNumber.value.length < 11 || inputName.value.length < 5){
                 alert('Por favor, insira dados válidos: o nome deve ter pelo menos 5 letras e o número de contato deve incluir DDD seguido de 9 dígitos')
             } else {
@@ -187,13 +193,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     const inputName = document.createElement('input')
                     inputName.type = 'text'
                     inputName.classList.add('name-contact')
-                    inputName.placeholder = 'Name *'
+                    inputName.placeholder = 'Nome *'
                     inputName.value = valueName.innerHTML
             
                     const inputNumber = document.createElement('input')
                     inputNumber.type = 'number'
                     inputNumber.classList.add('number-contact')
-                    inputNumber.placeholder = 'Number *'
+                    inputNumber.placeholder = 'Número *'
                     inputNumber.value = valueNumber.innerHTML
             
                     const actions = document.createElement('div')
