@@ -13,12 +13,11 @@
 }
 
 body {
-    background-color: #00012b;
-    padding-top: 200px;
+    background-color: rgb(122, 112, 255);
+    padding: 200px 0px 50px 0px;
 }
 
 .main-content {
-    background-color: #00012b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +31,7 @@ body {
     margin-bottom: 10px;
 }
 .content {
+    border-radius: 10px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -111,10 +111,6 @@ button, select, input {
     gap: 47px;
 }
 
-.block {
-    display: block;
-}
-
 #newContact-Before {
     display: flex;
     flex-flow: column nowrap;
@@ -122,4 +118,89 @@ button, select, input {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+#newContact:hover, #editBtn:hover, select:hover, .fa-magnifying-glass:hover, .searchBtn:hover, input:hover {
+    background-color: rgb(50, 159, 255);
+}
+
+#newContact, button, select, option, input {
+    background-color: rgb(0, 136, 255);
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.219);
+    cursor: pointer;
+}
+
+i {
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+.fa-eraser:hover, .cancelBtn:hover, #clearFilter:hover {
+    background-color: rgb(255, 17, 0);
+}
+
+.fa-pen:hover, #cancelEditBtn:hover {
+    background-color: yellow;
+    color: #333;
+}
+
+.confirmBtn:hover {
+    background-color: rgb(83, 211, 51);
+}
+
+.cancelBtn:hover {
+    background-color: red;
+}
+
+.personal-contacts {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    background-color: #ccc;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.219);
+}
+
+.personal-contacts > i {
+    color: #333;
+}
+
+@media screen and (max-width: 400px){
+    body {
+        padding: 100px 0px ;   
+    }
+
+    header {
+        display: flex;
+        gap: 5px;
+        width: 75%;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    #personal-contacts-container {
+        width: 100%;
+    }
+
+    .personal-contacts {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
