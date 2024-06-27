@@ -8,5 +8,10 @@
 let pessoas = ['joao', 'carlo', 'pedro', 'augusto']
 console.log(pessoas)
 
-console.log(pessoas.length)
+for(let i = 0; i < pessoas.length; i++){
+    console.log(`O nome da pessoa é ${pessoas[i]}`)
+}
+
+console.log(`Tem exatamente ${pessoas.length} pessoas nesse array`)
+
 
