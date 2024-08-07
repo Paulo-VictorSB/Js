@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimo Exercício!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            background-color: rgb(255, 159, 247);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column nowrap;
+        }
+
+        body > p {
+            margin-top: 10px;
+            color: white;
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            text-align: center;
+            flex-flow: column nowrap;
+            gap: 10px;
+            box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.219);
+        }
+        
+        #textareaInput{
+            width: 250px;
+        }
+
+        #button{
+            width: 135px;
+        }
+
+        #textareaInput {
+            padding: 5px;
+            text-align: left;
+            height: 150px;
+            border: 1px solid #333;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!--  Crie um input que pega os valores e no js faça com que esses valores sejam salvos em um array, caso esse valor seja inserido novamente exiba uma mensagem de que não é possivel adicionar e tente novamente. Se o valor for menor que 1 e maior que 100 exiba uma mensagem de texto também dizendo que não é possivel adicionar o valor, se a caixa estiver vazia, você também vai exibir uma mensagem de erro! 
+      
+        Analise quantos valores foram cadastrados
+        Analise o maior valor
+        Analise o menor valor
+        Some todos os valores
+        Calcule a média dos valores
+
+    Se adicionar um outro valor após calcular o resultado, você deve apagar o antigo e prescrever com um novo, o valor no array se mantém.
+    Caso você tente finalizar sem adicionar um valor, exiba uma mensagem também dizendo que não foi possivel finalizar o resultado
+
+    -->
+
+    <main>
+        <h1>
+            <header>Analisador de Números</header>
+        </h1>
+        <nav><label>Digite um número de 1 a 100: <input type="number" id="numInput"></label> <input type="button" value="Adicionar" id="adicionar"></nav>
+        <div id="textareaInput"></div>
+        <input type="button" id="button" value="Finalizar">
+    </main>
+    <p>&copy;Paulo Victor 2024</p>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

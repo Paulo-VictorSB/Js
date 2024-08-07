@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de Validação</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50%;
+            width: 50%; 
+            padding: 10px;
+            background-color: #d3d3d3;
+            flex-flow: column nowrap;
+            gap: 20px;
+        }
+
+        button {
+            width: 20%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <h1>Teste de REGEX</h1>
+        <label>Email: <input type="text" id="email"></label>
+        <p id="emailsituation"></p>
+        <label>Número: <input type="text" id="numero"></label>
+        <p id="numerosituation"></p>
+        <button id="checar">Checar</button>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
