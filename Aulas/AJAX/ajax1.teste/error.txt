@@ -1,0 +1,1 @@
+Seu email não é Válido, não pode conter (!@#$%¨&*/°º:;|\). Por favor, tente novamente.
